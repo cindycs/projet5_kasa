@@ -3,7 +3,7 @@ import Gallery from "../components/Gallery"
 
 export default function Accueil() {
     return (
-        <div>
+        <div className="wrapper">
             <Home />
             <Gallery />
         </div>
