@@ -1,7 +1,11 @@
 import Home from "../components/home/Home"
+import Gallery from "../components/Gallery"
 
 export default function Accueil() {
     return (
-        <Home />
+        <div>
+            <Home />
+            <Gallery />
+        </div>
     )
 }
