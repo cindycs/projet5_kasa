@@ -10,15 +10,17 @@
         display: flex;
         flex-direction: row;
         gap: 20px;
-    }
-        a{
+        .nav-contain {
             text-decoration: none;
             font-weight: 600;
             border-top: 1px solid transparent;
+            font-size: 1rem;
         }
-        a:hover, .active{
+
+        .nav-contain:hover, .active{
             border-bottom: 1px solid #000;
         }
+    }
 }
 
 .wrapper, .wrapper-header {
@@ -36,8 +38,6 @@
     background-position: center;
     border-radius: 16px;
     margin-bottom: 32px;
-    
-}
     .filtre-banner { 
         height: 223px; 
         display: flex;
@@ -45,13 +45,15 @@
         align-items: center;
         background-color: rgba(0, 0, 0, 0.6);
         border-radius: 16px;
-    }
         .text-overlay {
             font-size: 2.5rem;
             font-weight: 600;
             color: $font-color;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
+    }
+}
+
 /* --------- GALLERY CARD ----------- */
 .gallery-card {
     display: flex;
@@ -64,7 +66,6 @@
     padding-top: 40px;
     padding-bottom: 40px;
     margin-bottom: 40px;
-}
     .card {
         height: 340px;
         width: 340px;
@@ -73,13 +74,14 @@
         justify-content: flex-end;
         background: linear-gradient($main-color, #CE4E4E);
         border-radius: 16px;
-    }
-        .card-contain{
+        p {
             margin-left: 12px;
             color: $font-color;
             font-weight: 600;
             width: 100px;
         }
+    }
+}
 
 /* -------- FOOTER -------- */
 footer {
@@ -87,10 +89,69 @@ footer {
     text-align: center;
     padding-top: 32px;
     padding-bottom: 4px;
+
     .logo-footer {
         margin-top: 20px;
     }
+
     .copyright {
         color: $font-color;
+    }
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1240px) */
+@media (max-width: 1240px) {
+    .wrapper, .wrapper-header {
+        width: calc(100% - 40px);
+        max-width: 100%;
+        margin-right: 20px;
+        margin-left: 20px;
+        box-sizing: border-box;
+    }
+
+    .logo img{
+        height: 46px;
+    }
+
+    nav {
+        box-sizing: border-box;
+        .nav-contain {
+            text-transform: uppercase;
+            font-size: 0.8rem!important;
+        }
+    }
+
+    .banner, .filtre-banner {
+        width: 100%;        
+    } 
+}
+
+@media (max-width: 767.98px) {
+    .banner, .filtre-banner {
+        height: 112px!important;  
+    }
+    .filtre-banner {
+        justify-content: flex-start!important;  
+        .text-overlay {
+            font-size: 1.8rem!important;
+            margin-left: 12px;
+        }
+    }
+    
+    .gallery-card {
+        background-color: #fff;
+        .card {
+            height: 255px;
+            width: 100%;
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .copyright {
+            width: 50%;
+        }
     }
 }
