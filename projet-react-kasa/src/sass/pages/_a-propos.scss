@@ -28,3 +28,16 @@
         border-radius: 5px;
     }
 }
+
+@media (max-width: 1240px) {
+    .collapse-list .collapse {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .collapse-list .collapse {
+        height: 35px;
+        font-size: 1rem;
+    }
+}
