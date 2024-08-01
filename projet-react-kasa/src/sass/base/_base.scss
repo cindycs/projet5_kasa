@@ -7,3 +7,10 @@ body {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     margin: 0px;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
