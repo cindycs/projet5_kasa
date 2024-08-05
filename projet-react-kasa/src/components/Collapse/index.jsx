@@ -34,13 +34,13 @@ export default function Collapse() {
         <div >
             {rubriqueList.map((rubrique) => (
                 <div className="collapse-list" key= {rubrique.id}>
-                    <button 
+                    <div 
                     className="collapse" 
                     onClick={() => setSelectedRubriqueId(selectedRubriqueId === rubrique.id ? null : rubrique.id)}> 
                         {rubrique.name}
-                        <FontAwesomeIcon icon={selectedRubriqueId === rubrique.id ? faChevronUp : faChevronDown} />
-                    </button>
-                    {selectedRubriqueId === rubrique.id && <p>{rubrique.description}</p>}
+                        <button className="btn-collapse"><FontAwesomeIcon icon={selectedRubriqueId === rubrique.id ? faChevronUp : faChevronDown} /></button>
+                    </div>
+                    {selectedRubriqueId === rubrique.id && <p className="collapse-contain">{rubrique.description}</p>}
                 </div>
             ))}
         </div>

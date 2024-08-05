@@ -1,0 +1,51 @@
+/* --------- BANNER ----------- */
+.banner {
+    height: 223px;
+    width: 1240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    .filtre-banner { 
+        height: 223px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 16px;
+        .text-overlay {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.banner-accueil {
+    background-image: url('../../assets/slide-accueil.png');
+}
+
+.banner-a-propos {
+    background-image: url('../../assets/slide-a-propos.png');
+}
+
+@media (max-width: 1240px) {
+    .banner, .filtre-banner {
+        width: 100%;        
+    }
+} 
+
+@media (max-width: 767.98px) {
+    .banner {
+        height: 112px;   
+        .filtre-banner {
+            height: 112px; 
+            justify-content: flex-start;  
+            .text-overlay {
+                font-size: 1.8rem;
+                margin-left: 12px;
+            }
+        }
+    }
+}

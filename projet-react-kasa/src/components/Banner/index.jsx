@@ -1,8 +1,19 @@
-export default function Banner() {
+import './Banner.scss'
+
+export default function Banner({ type }) {
+    let bannerClass = 'banner';
+    if (type === 'accueil') {
+        bannerClass += ' banner-accueil';
+    } else if (type === 'a-propos') {
+        bannerClass += ' banner-a-propos';
+    }
+
     return (
-        <div className="banner">
+        <div className={bannerClass}>
             <div className="filtre-banner">
-                <p className="text-overlay">Chez vous, partout et ailleurs</p>
+                <p className="text-overlay">
+                    {type === 'accueil' ? 'Chez vous, partout et ailleurs' : ''}
+                </p>
             </div>
         </div>
     )

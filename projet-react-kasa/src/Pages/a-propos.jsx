@@ -5,7 +5,7 @@ import Collapse from "../components/Collapse"
 export default function Apropos() {
     return (
         <div className="wrapper">
-            <Banner />
+            <Banner type="a-propos" />
             <Collapse />
         </div>
     )
