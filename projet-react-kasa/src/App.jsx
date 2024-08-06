@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.scss'
 import { Routes, Route } from "react-router-dom"
 import Accueil from './Pages/accueil'
-import Fiche from './Pages/fiche-logement'
+import FicheLogement from './Pages/fiche-logement'
 import Apropos from './Pages/a-propos'
 import Error from './Pages/404'
 import './sass/main.scss';
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/a-propos" element={<Apropos />} />
-          <Route path="/fiche-logement" element={<Fiche />} />
+          <Route path="/fiche-logement/:id" element={<FicheLogement />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
