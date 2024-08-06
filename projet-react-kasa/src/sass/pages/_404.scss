@@ -1,0 +1,44 @@
+@import '../base/base';
+
+.wrapper-error {
+    width: 1240px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    .error-title {
+        color: $main-color;
+        font-size: 12rem;
+        margin:0px;
+    }
+    .error-contain {
+        color: $main-color;
+        font-weight: normal;
+    }
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+/* -------- MEDIA QUERIES ------ */
+@media (max-width: 1240px) {
+    .wrapper-error {
+        width: calc(100% - 40px);
+        max-width: 100%;
+        margin-right: 20px;
+        margin-left: 20px;
+        box-sizing: border-box;
+        .error-title {
+            font-size: 7rem;
+            margin-top: 20px;
+        }
+        .error-contain {
+            text-align: center;
+        }
+    }
+}

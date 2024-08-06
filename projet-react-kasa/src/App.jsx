@@ -6,7 +6,7 @@ import Fiche from './Pages/fiche-logement'
 import Apropos from './Pages/a-propos'
 import Error from './Pages/404'
 import './sass/main.scss';
-import Header from './components/Header/'
+import Header from './components/Header'
 import Footer from './components/Footer/'
 
 function App() {
