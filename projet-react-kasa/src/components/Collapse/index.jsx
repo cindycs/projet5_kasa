@@ -28,6 +28,7 @@ const rubriqueList = [
 
 export default function Collapse() {
     const [selectedRubriqueId, setSelectedRubriqueId] = useState(null);
+    const [active, setActive] = useState(false);
 
 
     return (
@@ -36,9 +37,9 @@ export default function Collapse() {
                 <div className="collapse-list" key= {rubrique.id}>
                     <div 
                     className="collapse" 
-                    onClick={() => setSelectedRubriqueId(selectedRubriqueId === rubrique.id ? null : rubrique.id)}> 
+                    onClick={() => setActive( !active)}> 
                         {rubrique.name}
-                        <button className="btn-collapse"><FontAwesomeIcon icon={selectedRubriqueId === rubrique.id ? faChevronUp : faChevronDown} /></button>
+                        <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={selectedRubriqueId === rubrique.id ? faChevronUp : faChevronDown} /></button>
                     </div>
                     {selectedRubriqueId === rubrique.id && <p className="collapse-contain">{rubrique.description}</p>}
                 </div>
