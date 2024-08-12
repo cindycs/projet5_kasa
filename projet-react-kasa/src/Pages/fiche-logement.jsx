@@ -9,7 +9,7 @@ export default function FicheLogement() {
 
     return (
         <div className="wrapper">
-            <Slideshow />
+            <Slideshow pictures={logement.pictures}/>
             
                 {/*logement.pictures.map((picture) => (
                     <div className="slide-show">
