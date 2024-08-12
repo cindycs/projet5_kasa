@@ -18,8 +18,11 @@ export default function Collapse({title, description}) {
                     {title}
                     <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={active === true ? faChevronUp : faChevronDown} /></button>
                 </div>
-                {active === true && <p className="collapse-contain">{description}</p>}
-                
+                {active === true && 
+                    <div className={"collapse-contain" + (active ? " show" : '')}>
+                        <p>{description}</p>
+                    </div>
+                }
             </div> 
         </div>
     )

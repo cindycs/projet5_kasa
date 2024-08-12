@@ -3,20 +3,27 @@ import { useParams } from "react-router-dom";
 import Slideshow from '../components/Slideshow';
 
 export default function FicheLogement() {
-    const { id } = useParams();
+    const { id } = useParams(); //Récupération de l'id de l'URL
+    const logement = logementList.find(logement => logement.id === id);
+    //const images = logement.pictures.map((picture) => ());
 
     return (
         <div className="wrapper">
             <Slideshow />
-            <h2>Ceci est la fiche de logement n°{id}</h2>
+            
+                {/*logement.pictures.map((picture) => (
+                    <div className="slide-show">
+                        <img key ={picture} src={picture} alt={`Image de ${logement.title}`}/>
+                    </div>
+                ))*/}
+            
             <section className='logement'>
-            {logementList.map((logement) => (
-                <div key={ logement.id } className="logement-contain">     
-                    {logement.title}
+            <h2>{logement.title}</h2>
+            <p>{logement.location}</p>
+                <div className="logement-contain">
+                    {logement.description}
                 </div>
-            ))}
             </section>
         </div>
-        
     )
 }
