@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
 
 
 export default function Collapse({title, description}) {
@@ -16,7 +14,7 @@ export default function Collapse({title, description}) {
                 className="collapse" 
                 onClick={() => setActive( !active)}> 
                     {title}
-                    <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={active === true ? faChevronUp : faChevronDown} /></button>
+                    <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={active === true ? faChevronUp : faChevronUp} /></button>
                 </div>
                 {active === true && 
                     <div className={"collapse-contain" + (active ? " show" : '')}>

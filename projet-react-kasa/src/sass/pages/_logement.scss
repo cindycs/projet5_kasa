@@ -1,4 +1,9 @@
 .logement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* ------- LEFT SIDE -------- */
     h2 {
         font-size: 30px;
         font-weight: normal;
@@ -12,10 +17,11 @@
         margin: 8px 0px 20px 0px;
     }
 
-    ul {
+    .list-tag {
         display:flex;
         flex-direction: row;
-        column-gap: 8px;
+        flex-wrap: wrap;
+        gap: 8px;
         padding: 0px;
         margin: 24px 0px;
 
@@ -32,12 +38,62 @@
         }
     }
 
-    .logement-contain {
-        display: flex;
-        flex-direction: row;
-        
-        .logement-carac {
-            width: 100%;
+    /* ------- RIGHT SIDE -------- */
+    
+    .logement-autor {
+        display:flex;
+        flex-direction: column;
+
+        .logement-host {
+            display: flex;
+            flex-direction: row;
+            margin-top: 28px;
+    
+            .host-name {
+                color: $main-color;
+                margin-right: 8px;
+                width: 100px;
+                p {
+                    text-align: right;
+                    line-height: 1.5;
+                    margin-top: 8px;
+                }
+            }
+    
+            .host-picture img{
+                height: 64px;
+                border-radius: 64px;
+            }
         }
+        .list-stars {
+            display:flex;
+            flex-direction: row;
+            column-gap: 8px;
+            padding: 0px;
+            margin: 24px 0px;
+
+            .stars {
+                list-style-type: none;
+                color: gray;
+            }
+
+            li.filled {
+                color: $main-color;
+            }
+        }        
+    }
+
+    
+
+}
+/* ------ COLLAPSE LOGEMENT ----- */
+
+.logement-contain {
+    display: flex;
+    flex-direction: row;
+    column-gap: 64px;
+
+    .logement-carac {
+        width: 100%;
     }
 }
