@@ -34,27 +34,29 @@
         list-style-type:none;
         padding: 0px;
         height: 415px;
-    }
-
-    .slide {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-
-        img {
-            display: block;
+        .slide {
+            position: absolute;
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            opacity: 0;
+    
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+            }
         }
     }
 
     .slide.active {
         opacity: 1;
     }
-
-   
 }
 
-/* https://www.youtube.com/watch?v=EN1EZVspMOQ */
+@media (max-width: 767.98px) {
+    .slide-show button {
+        font-size: 50px;
+    }
+}

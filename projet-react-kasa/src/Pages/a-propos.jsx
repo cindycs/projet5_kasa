@@ -28,9 +28,11 @@ export default function Apropos() {
     return (
         <div className="wrapper">
             <Banner type="a-propos" />
-            {rubriqueList.map(rubrique => (
-                <Collapse key={rubrique.id} title={rubrique.name} description={rubrique.description} />
-            ))}
+			<div className="wrapper-a-propos">
+				{rubriqueList.map(rubrique => (
+					<Collapse key={rubrique.id} title={rubrique.name} description={rubrique.description} />
+				))}
+			</div>
         </div>
     )
 }

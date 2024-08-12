@@ -23,7 +23,7 @@ export default function Slideshow({pictures}) {
             <ul>
                 {pictures.map((image, index) => (
                     <li key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
-                        <img src={image}/>
+                        <img src={image} alt={`slide n° ${index}`}/>
                     </li>
                 ))}
             </ul>

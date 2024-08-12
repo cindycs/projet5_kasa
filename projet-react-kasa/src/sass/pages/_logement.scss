@@ -1,0 +1,43 @@
+.logement {
+    h2 {
+        font-size: 30px;
+        font-weight: normal;
+        color: $main-color;
+        margin-bottom: 0px;
+    }
+    
+    .localisation {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 8px 0px 20px 0px;
+    }
+
+    ul {
+        display:flex;
+        flex-direction: row;
+        column-gap: 8px;
+        padding: 0px;
+        margin: 24px 0px;
+
+        .tag {
+            list-style-type: none;
+            color: #fff;
+            background-color: $main-color;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 160px;
+            text-align: center;
+        }
+    }
+
+    .logement-contain {
+        display: flex;
+        flex-direction: row;
+        
+        .logement-carac {
+            width: 100%;
+        }
+    }
+}
