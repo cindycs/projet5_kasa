@@ -18,7 +18,16 @@ export default function Collapse({title, description}) {
                 </div>
                 {active === true && 
                     <div className={"collapse-contain" + (active ? " show" : '')}>
-                        <p>{description}</p>
+                        {Array.isArray(description) ? (
+                            <ul>
+                                {description.map((desc, index) => (
+                                    <li key={index}>{desc}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p>{description}</p>
+                        )}
+                       
                     </div>
                 }
             </div> 
