@@ -8,29 +8,27 @@ export default function Collapse({title, description}) {
 
 
     return (
-        <div >
-            <div className="collapse-list">
-                <div 
-                className="collapse" 
-                onClick={() => setActive( !active)}> 
-                    {title}
-                    <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={faChevronUp} /></button>
+        <div className="collapse-list">
+            <div 
+            className="collapse" 
+            onClick={() => setActive( !active)}> 
+                {title}
+                <button className={"btn-collapse" + (active ? " active" : '' )}><FontAwesomeIcon icon={faChevronUp} /></button>
+            </div>
+            {active === true && 
+                <div className={"collapse-contain" + (active ? " show" : '')}>
+                    {Array.isArray(description) ? (
+                        <ul>
+                            {description.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>{description}</p>
+                    )}
+                    
                 </div>
-                {active === true && 
-                    <div className={"collapse-contain" + (active ? " show" : '')}>
-                        {Array.isArray(description) ? (
-                            <ul>
-                                {description.map((desc, index) => (
-                                    <li key={index}>{desc}</li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p>{description}</p>
-                        )}
-                       
-                    </div>
-                }
-            </div> 
+            }
         </div>
     )
 }
