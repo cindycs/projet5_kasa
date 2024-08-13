@@ -14,7 +14,7 @@ export default function Collapse({title, description}) {
                 className="collapse" 
                 onClick={() => setActive( !active)}> 
                     {title}
-                    <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={active === true ? faChevronUp : faChevronUp} /></button>
+                    <button className={"btn-collapse"+(active ? " active" : '' )}><FontAwesomeIcon icon={faChevronUp} /></button>
                 </div>
                 {active === true && 
                     <div className={"collapse-contain" + (active ? " show" : '')}>

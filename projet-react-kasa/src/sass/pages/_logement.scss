@@ -82,9 +82,6 @@
             }
         }        
     }
-
-    
-
 }
 /* ------ COLLAPSE LOGEMENT ----- */
 
@@ -95,5 +92,36 @@
 
     .logement-carac {
         width: 100%;
+    }
+}
+
+/* --------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 767.98px) {
+    .logement {
+        flex-direction: column;
+
+        .logement-autor {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+
+            .logement-host {
+                order: 2;
+                margin-top: 0px;
+
+                .host-picture img {
+                    height: 52px;
+                }
+            }
+
+            .logemet-rating {
+                order: 1;
+            }
+        }
+    }
+
+    .logement-contain {
+        flex-direction: column;
     }
 }
