@@ -1,0 +1,40 @@
+.wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px auto 28px auto;
+    width: 1240px;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+
+        .nav-contain {
+            text-decoration: none;
+            font-weight: 600;
+            border-top: 1px solid transparent;
+            font-size: 1.5rem;
+        }
+
+        .nav-contain:hover, .active{
+            border-bottom: 1px solid #000;
+        }
+    }
+}
+
+@media (max-width: 767.98px) { 
+    .logo img{
+        height: 46px;
+    }
+
+    .wrapper-header nav {
+        box-sizing: border-box;
+        gap: 20px;
+
+        .nav-contain {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+    }
+}

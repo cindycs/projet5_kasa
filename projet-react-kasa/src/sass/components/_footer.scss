@@ -1,0 +1,27 @@
+footer {
+    background-color: black;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 4px;
+
+    .logo-footer {
+        margin-top: 20px;
+    }
+
+    .copyright {
+        color: $font-color;
+    }
+}
+
+@media (max-width: 767.98px) {   
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .copyright {
+            width: 50%;
+        }
+    }
+}
