@@ -1,8 +1,8 @@
 import './App.scss'
 import { Routes, Route } from "react-router-dom"
-import Accueil from './Pages/accueil'
-import FicheLogement from './Pages/fiche-logement'
-import Apropos from './Pages/a-propos'
+import Accueil from './Pages/Accueil'
+import FicheLogement from './Pages/FicheLogement'
+import Apropos from './Pages/Apropos'
 import Error from './Pages/404'
 import './sass/main.scss';
 import Header from './components/Header'
