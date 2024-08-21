@@ -1,0 +1,67 @@
+
+/* --------- GALLERY CARD ----------- */
+.gallery-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: $background-color;
+    row-gap: 40px;
+    border-radius: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    .card {
+        height: 340px;
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        border-radius: 16px;
+        position: relative;
+
+        img{
+            border-radius: 16px;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        p {
+            background-color: $main-color;
+            //background-color: rgba(0, 0, 0, 0.5);
+            color: $font-color;
+            padding-left: 12px;
+            vertical-align: baseline;
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            margin: 0px;
+            border-radius: 0px 0px 16px 16px;
+            box-sizing: border-box;
+        }
+
+        .card-btn {
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: left;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: transparent;        
+        }
+    }
+    
+}
+
+
+@media (max-width: 767.98px) {    
+
+    .gallery-card {
+        background-color: $font-color;
+        .card {
+            height: 255px;
+            width: 100%;
+        }
+    }
+}

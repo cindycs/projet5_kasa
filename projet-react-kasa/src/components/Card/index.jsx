@@ -11,13 +11,16 @@ export default function Card() {
     return (
         <section className="gallery-card">
             {logementList.map((logement) => (
-                <button
-                 key={ logement.id } 
-                 className="card"
-                 onClick={() => handleCardClick(logement.id)}
-                 >     
-                    {logement.title}
-                </button>
+                <div className="card">
+                    <img src ={logement.cover}/>
+                    <p>{logement.title}</p>
+                    <button
+                        key={ logement.id } 
+                        className="card-btn"
+                        onClick={() => handleCardClick(logement.id)}
+                        >     
+                    </button>
+                </div>
             ))}
         </section>
     )

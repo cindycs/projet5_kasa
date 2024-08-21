@@ -29,34 +29,6 @@
     margin-left: auto;
 }
 
-/* --------- GALLERY CARD ----------- */
-.gallery-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background-color: $background-color;
-    row-gap: 40px;
-    border-radius: 16px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-    .card {
-        height: 340px;
-        width: 340px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        background: linear-gradient($main-color, #CE4E4E);
-        border-radius: 16px;
-        border: none;
-        color: $font-color;
-        font-size: 1rem;
-        cursor: pointer;
-        padding: 0px 0px 12px 12px;
-        text-align: left;
-    }
-}
 
 /* -------- FOOTER -------- */
 footer {
