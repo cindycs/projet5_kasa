@@ -18,8 +18,13 @@ export default function Slideshow({pictures}) {
 
     return (
         <div className="slide-show">
-            <button className="prev" onClick={handlePrev}><FontAwesomeIcon icon={faChevronLeft} /></button>
-            <button className="next" onClick={handleNext}><FontAwesomeIcon icon={faChevronRight} /></button>
+            {pictures.length > 1 && (
+                <>
+                <button className="prev" onClick={handlePrev}><FontAwesomeIcon icon={faChevronLeft} /></button>
+                <button className="next" onClick={handleNext}><FontAwesomeIcon icon={faChevronRight} /></button>
+                </>
+            )}
+            
             <ul>
                 {pictures.map((image, index) => (
                     <li key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
