@@ -11,11 +11,10 @@ export default function Card() {
     return (
         <section className="gallery-card">
             {logementList.map((logement) => (
-                <div className="card">
+                <div className="card" key={ logement.id }>
                     <img src ={logement.cover}/>
                     <p>{logement.title}</p>
                     <button
-                        key={ logement.id } 
                         className="card-btn"
                         onClick={() => handleCardClick(logement.id)}
                         >     
