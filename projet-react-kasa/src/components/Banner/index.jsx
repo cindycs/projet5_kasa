@@ -1,4 +1,3 @@
-import './Banner.scss'
 
 export default function Banner({ type }) {
     let bannerClass = 'banner';

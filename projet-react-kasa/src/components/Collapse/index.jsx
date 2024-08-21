@@ -19,20 +19,20 @@ export default function Collapse({title, description}) {
                 {title}
                 <button className={"btn-collapse" + (active ? " active" : '' )}><FontAwesomeIcon icon={faChevronUp} /></button>
             </div>
-            {active && 
-                <div className={"collapse-contain" + (active ? " show" : '')}>
-                    {Array.isArray(description) ? (
-                        <ul>
-                            {description.map((desc, index) => (
-                                <li key={index}>{desc}</li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p>{description}</p>
-                    )}
-                    
-                </div>
-            }
+           
+            <div className={"collapse-contain" + (active ? " show" : '')}>
+                {Array.isArray(description) ? (
+                    <ul>
+                        {description.map((desc, index) => (
+                            <li key={index}>{desc}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>{description}</p>
+                )}
+                
+            </div>
+            
         </div>
     )
 }
