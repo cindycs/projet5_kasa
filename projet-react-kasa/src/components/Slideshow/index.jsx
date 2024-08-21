@@ -3,11 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * 
+ * Le composant `Slideshow` permet d'afficher une série d'images sous forme d'un carrousel.
+ * L'utilisateur peut naviguer entre les images en utilisant des boutons de navigation
+ * qui apparaissent lorsque plus d'une image est disponible.
+ *
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {string[]} props.pictures - Un tableau d'URL des images à afficher dans le carrousel.
+ *
+ * @returns {JSX.Element} Un élément JSX représentant un carrousel interactif.
+ */
+
 export default function Slideshow({pictures}) {
-    //Créations du useState pour gérer l'index des images
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    //Fonctions qui modifient l'index actuel
     const handlePrev = () => {
         setCurrentIndex((currentIndex) => (currentIndex === 0 ? pictures.length - 1 : currentIndex - 1));
     }
