@@ -1,5 +1,4 @@
 
-/* --------- GALLERY CARD ----------- */
 .gallery-card {
     display: flex;
     flex-direction: row;
@@ -11,6 +10,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     margin-bottom: 40px;
+
     .card {
         height: 340px;
         width: 340px;
@@ -27,13 +27,12 @@
         }
 
         p {
-            background-color: $main-color;
-            //background-color: rgba(0, 0, 0, 0.5);
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
             color: $font-color;
             padding-left: 12px;
-            vertical-align: baseline;
+            line-height: 50px;
             position: absolute;
-            height: 50px;
             width: 100%;
             margin: 0px;
             border-radius: 0px 0px 16px 16px;
@@ -59,6 +58,7 @@
 
     .gallery-card {
         background-color: $font-color;
+        
         .card {
             height: 255px;
             width: 100%;
