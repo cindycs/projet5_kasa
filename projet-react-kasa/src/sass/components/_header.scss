@@ -23,6 +23,14 @@
     }
 }
 
+@media (max-width: 1240px) {
+    .wrapper-header {
+        margin: 20px;
+        width: calc(100% - 40px);
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 767.98px) { 
     .logo img {
         height: 46px;
