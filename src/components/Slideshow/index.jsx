@@ -33,7 +33,11 @@ export default function Slideshow({pictures}) {
                 <>
                 <button className="prev" onClick={handlePrev}><FontAwesomeIcon icon={faChevronLeft} /></button>
                 <button className="next" onClick={handleNext}><FontAwesomeIcon icon={faChevronRight} /></button>
+                <div className="compteur">  
+                    <span>{currentIndex + 1} / {pictures.length}</span>
+                </div>
                 </>
+                
             )}
             
             <ul>
